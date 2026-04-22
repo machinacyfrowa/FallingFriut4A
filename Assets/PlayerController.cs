@@ -5,10 +5,10 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f; // Prêdkoœæ poruszania siê gracza
     Vector2 movementInput;
-    GameObject levelManager; // Referencja do obiektu LevelManager
+    //GameObject levelManager; // Referencja do obiektu LevelManager
     void Start()
     {
-        levelManager = GameObject.Find("LevelManager"); // ZnajdŸ obiekt LevelManager w scenie
+        //levelManager = GameObject.Find("LevelManager"); // ZnajdŸ obiekt LevelManager w scenie
     }
     void OnMove(InputValue value)
     {
@@ -30,6 +30,6 @@ public class PlayerController : MonoBehaviour
         //Debug.Log("Player collided with: " + collision.gameObject.name);
         Destroy(collision.gameObject); // Destroy the object we collided with
         // Dodaj punkty za zniszczenie obiektu
-        levelManager.GetComponent<LevelManager>().AddPoints(); 
+        LevelManager.Instance.AddPoints(); 
     }
 }
