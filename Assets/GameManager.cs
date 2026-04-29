@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
         {
             highScore = score;
             PlayerPrefs.SetInt("HighScore", highScore);
+            //zapomnieliœmy o zapisaniu zmian!!!
+            PlayerPrefs.Save();
         }
     }
 }
