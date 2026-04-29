@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
             //¿eby nie by³o dwóch instancji
             Destroy(gameObject);
         }
-        PlayerPrefs.GetInt("HighScore", 0); // Pobierz zapisany wynik z PlayerPrefs, domyœlnie 0
+        highScore = PlayerPrefs.GetInt("HighScore", 0); // Pobierz zapisany wynik z PlayerPrefs, domyœlnie 0
     }
     public void NewGame()
     {
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
             highScore = score;
             PlayerPrefs.SetInt("HighScore", highScore);
             //zapomnieliœmy o zapisaniu zmian!!!
-            PlayerPrefs.Save();
+            PlayerPrefs.Save(); 
         }
     }
 }
