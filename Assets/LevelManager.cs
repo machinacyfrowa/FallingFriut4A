@@ -44,7 +44,16 @@ public class LevelManager : MonoBehaviour
         if (lives <= 0)
         {
             Time.timeScale = 0; // Zatrzymaj grê
+            GameManager.Instance.SetHighScore(points); // Zapisz wynik jako high score
+                                                       //  Game manager sam sprawdzi czy nowy
+                                                       //  wynik jest lepszy od poprzedniego i
+                                                       //  zapisze go w PlayerPrefs
             gameOverPanel.SetActive(true); // Wyœwietl panel Game Over
         }
+    }
+    public void MainMenu()
+    {
+        Time.timeScale = 1; // Przywróæ normalne tempo gry
+        GameManager.Instance.MainMenu(); // PrzejdŸ do menu g³ównego
     }
 }
