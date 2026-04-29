@@ -29,9 +29,9 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        pointsCounter.GetComponent<TextMeshProUGUI>().text = 
+        pointsCounter.GetComponent<TextMeshProUGUI>().text =
                 "Punkty: " + points; // Update the text of the points counter
-        livesCounter.GetComponent<TextMeshProUGUI>().text =
+        livesCounter.GetComponent<TextMeshProUGUI>().text = 
                 "¯ycia: " + lives; // Update the text of the lives counter
     }
     public void AddPoints(int amount = 1)
